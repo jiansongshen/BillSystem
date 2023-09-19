@@ -3,6 +3,7 @@ import java.util.Date;
 /*
  * Author: Jiansong Shen
  * Version: 1.0
+ * 账单类
  */
 public class Bill implements OutcomeCase{
     private String date;
