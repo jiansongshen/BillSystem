@@ -5,6 +5,7 @@ import java.awt.event.WindowEvent;
 /*
  * Author: Jiansong Shen
  * Version: 1.0
+ * 主程序
  */
 public class Main extends JFrame{
     OutcomePanel ocp = null;
@@ -15,6 +16,7 @@ public class Main extends JFrame{
     }
 
     Main(){
+        //初始化属性
         ocp = new OutcomePanel();
         selectPanel = new SelectPanel();
 
@@ -29,6 +31,7 @@ public class Main extends JFrame{
             @Override
             public void windowClosing(WindowEvent e) {
                 for (Object obj : ocp.vector) {
+                    //在文件关闭时保存记录
                     Record rec = (Record)obj;
                     rec.saveRecord();
                 }
